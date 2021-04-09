@@ -1,0 +1,31 @@
+{
+  "name": "react-native-notifly",
+  "version": "0.1.0",
+  "description": "Notifly allows you to show application notifications within the application and with your own components",
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "notifications",
+    "push"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/eleviven/react-native-notifly#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eleviven/react-native-notifly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eleviven/react-native-notifly/issues"
+  },
+  "author": "Firuz Haciyev https://twitter.com/elevivien",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-native": "^0.64.0"
+  }
+}
