@@ -32,8 +32,8 @@ export class Notifly extends Component {
   }
   // Add new notification
   fire(notification) {
-    const {behaviour} = notification?.options;
-    switch (behaviour) {
+    const {options} = notification;
+    switch (options?.behaviour) {
       case NOTIFICATION_BEHAVIOUR.SWIPE:
         this.hideNotifications();
         break;
