@@ -1,4 +1,6 @@
-<img src="https://i.imgur.com/L2pxZlUl.png" alt="Notifly" style="display:block;width: 400px;margin:0 auto;"/>
+<p align="center">
+<img src="https://i.imgur.com/L2pxZlUl.png" alt="Notifly"  width="50%" style="border: 0; width: 50%; min-width: 240px; max-width: 100%;"/>
+</p>
 
 <h3 align="center" style="text-align: center;">React Native Notifly</h3>
 <p align="center" style="font-size: 1.2rem;">Notifly allows you to show application notifications within the application and with your own components</p>
@@ -152,7 +154,9 @@ export default function ExampleScreen() {
     </tbody>
 </table>
 <br/>
+<p align="center">
 <img src="https://media2.giphy.com/media/C8lfq0sR0Vk2BERd98/giphy.gif" alt="Notifly" style="display:block;width: 400px;margin:0 auto;"/>
+</p>
 
 ## License
 
