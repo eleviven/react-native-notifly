@@ -25,7 +25,10 @@
   "author": "Firuz Haciyev https://twitter.com/elevivien",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^17.0.1",
-    "react-native": "^0.64.0"
+    "react": "*",
+    "react-native": "*"
+  },
+  "dependencies": {
+    "react-native-iphone-x-helper": "^1.3.1"
   }
 }

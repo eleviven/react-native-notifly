@@ -1,11 +1,10 @@
-import {NativeModules} from 'react-native';
-const {StatusBarManager} = NativeModules;
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
-export const STATUSBAR_HEIGHT = StatusBarManager.HEIGHT;
+export const STATUSBAR_HEIGHT = getStatusBarHeight();
 export const NOTIFICATION_BEHAVIOUR = {
-  SWIPE: 'swipe',
-  CLEAR: 'clear',
-  OVER: 'over',
+  SWIPE: "swipe",
+  CLEAR: "clear",
+  OVER: "over",
 };
 export const DISTANCE = {
   FROM: -150,
