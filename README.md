@@ -2,7 +2,7 @@
     <div style="max-width: 250px;margin: 0 auto;">
         <img src="https://i.imgur.com/L2pxZlUl.png" alt="Notifly" style="width: 100%;"/>
     </div>
-    <h3 align="center" style="text-align: center;">React Native AlertBox</h3>
+    <h3 align="center" style="text-align: center;">React Native Notifly</h3>
     <p align="center" style="font-size: 1.2rem;">Notifly allows you to show application notifications within the application and with your own components</p>
 </div>
 
