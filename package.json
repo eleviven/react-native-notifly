@@ -1,6 +1,6 @@
 {
   "name": "react-native-notifly",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Notifly allows you to show application notifications within the application and with your own components",
   "keywords": [
     "react-component",
