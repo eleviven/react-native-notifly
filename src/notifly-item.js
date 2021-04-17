@@ -60,10 +60,10 @@ export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
           [null, {dy: panValue.y, dx: panValue.x}],
           {
             useNativeDriver: false,
-          },
+          }
         ),
       }),
-    [panValue],
+    [panValue]
   );
 
   useEffect(() => {
@@ -87,15 +87,24 @@ export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
     }
   }, [notification]);
 
+  const handlePress = () => {
+    const { onPress } = notification;
+    if (onPress && typeof onPress === "function") {
+      onPress(notification);
+    }
+  };
+
   const renderComponent = () => {
     const {component} = notification;
     if (!component) {
       return (
-        <Card
-          title={notification.title}
-          message={notification.message}
-          avatar={notification.avatar}
-        />
+        <TouchableOpacity onPress={handlePress} activeOpacity={0.8}>
+          <Card
+            title={notification.title}
+            message={notification.message}
+            avatar={notification.avatar}
+          />
+        </TouchableOpacity>
       );
     }
     switch (typeof component) {
@@ -103,13 +112,6 @@ export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
         return component(notification);
       default:
         return component;
-    }
-  };
-
-  const handlePress = () => {
-    const {onPress} = notification;
-    if (onPress && typeof onPress === 'function') {
-      onPress(notification);
     }
   };
 
@@ -122,10 +124,9 @@ export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
         },
       ]}
       {...panResponder.panHandlers}
-      {...props}>
-      <TouchableOpacity onPress={handlePress}>
-        {renderComponent()}
-      </TouchableOpacity>
+      {...props}
+    >
+      {renderComponent()}
     </Animated.View>
   );
 }
