@@ -5,7 +5,7 @@ export default StyleSheet.create({
   wrapper: {
     position: "absolute",
     zIndex: 99,
-    top: STATUSBAR_HEIGHT + 15,
+    top: STATUSBAR_HEIGHT + 5,
     left: 0,
     width: "100%",
   },

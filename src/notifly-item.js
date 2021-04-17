@@ -1,10 +1,10 @@
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef, memo} from 'react';
 import {Animated, TouchableOpacity, PanResponder} from 'react-native';
 import Card from './components/card';
-import {DISTANCE} from './constants';
+import {DISTANCE, NOTIFICATION_BEHAVIOUR} from './constants';
 import styles from './styles/general.styles';
 
-export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
+function NotiflyItem({notification, onLeaveComplete, ...props}) {
   const animatedValue = useRef(new Animated.Value(0)).current;
   const panValue = useRef(new Animated.ValueXY({x: 0, y: 0})).current;
   const translateY = animatedValue.interpolate({
@@ -130,3 +130,13 @@ export default function NotiflyItem({notification, onLeaveComplete, ...props}) {
     </Animated.View>
   );
 }
+
+export default memo(NotiflyItem, (prev, next) => {
+  const prevNotification = prev.notification;
+  const nextNotification = next.notification;
+  return (
+    prevNotification.id === nextNotification.id &&
+    prevNotification?.options?.behaviour !== NOTIFICATION_BEHAVIOUR.SWIPE &&
+    nextNotification?.options?.behaviour !== NOTIFICATION_BEHAVIOUR.SWIPE
+  );
+});
